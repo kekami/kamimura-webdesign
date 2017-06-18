@@ -1,0 +1,184 @@
+:root {
+  box-sizing: border-box; }
+
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  font-family: Helvetica, Arial, sans-serif; }
+
+.container {
+  display: flex; }
+
+header {
+  background-color: #00303F;
+  color: #ffffff;
+  border-bottom: 2px solid #DCAE1D; }
+  header > .container {
+    flex-direction: column;
+    align-items: center; }
+    header > .container ul {
+      padding: 0; }
+    header > .container li {
+      list-style: none;
+      margin: 0 1em;
+      text-transform: uppercase; }
+    header > .container a {
+      text-decoration: none;
+      color: white; }
+      header > .container a:hover {
+        font-weight: 700; }
+
+.branding h1 {
+  font-size: 1.7rem;
+  margin-bottom: 0;
+  margin-top: 1em; }
+.branding .highlight {
+  color: #DCAE1D; }
+
+@media (min-width: 50em) {
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+
+  .branding h1 {
+    margin: 1em; } }
+.jumbotron {
+  background-image: url("../img/showcase.jpg");
+  background-size: cover;
+  padding: 1em;
+  color: #ffffff; }
+  .jumbotron > .container {
+    max-width: 80em;
+    flex-direction: column;
+    margin: 0 auto; }
+  .jumbotron h1 {
+    font-size: 2rem;
+    text-align: center; }
+  .jumbotron p {
+    text-align: center; }
+
+@media (min-width: 35em) {
+  .jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 35em; } }
+.newsletter {
+  background-color: #00303F;
+  color: #ffffff;
+  padding: 1em; }
+  .newsletter > .container {
+    flex-direction: column;
+    align-items: center; }
+    .newsletter > .container h2 {
+      margin: 0.5em; }
+    .newsletter > .container input {
+      padding: 0.5em; }
+    .newsletter > .container button {
+      display: block;
+      width: 100%;
+      margin-top: 0.4em;
+      padding: 0.5em;
+      background-color: #DCAE1D;
+      border: none;
+      color: #ffffff; }
+
+@media (min-width: 35em) {
+  .newsletter > .container {
+    flex-direction: row;
+    justify-content: center; }
+    .newsletter > .container form {
+      display: flex;
+      margin: 2em; }
+    .newsletter > .container input,
+    .newsletter > .container button {
+      margin: 0.5em; } }
+.features > .container {
+  flex-wrap: wrap; }
+  .features > .container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+    padding: 1em;
+    text-align: center; }
+    .features > .container .box img {
+      max-width: 10em; }
+
+@media (min-width: 35em) {
+  .features .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .features .container .box {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      margin: 2em; } }
+footer {
+  background-color: #00303F;
+  padding: 1em;
+  text-align: center;
+  color: #ffffff; }
+
+.about .container {
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em;
+  max-width: 80em;
+  margin: 0 auto; }
+  .about .container .info-box {
+    margin: 1em;
+    padding: 1em;
+    max-width: 30em;
+    background-color: #00303F;
+    color: #ffffff; }
+
+@media (min-width: 35em) {
+  .about .container {
+    flex-direction: row; }
+  .about .info-box {
+    min-height: 20em; } }
+.services {
+  text-align: center; }
+  .services .container {
+    flex-direction: column; }
+    .services .container .service {
+      margin: 1em;
+      background-color: #ddd;
+      border: 1px solid #bbb; }
+    .services .container .quote {
+      background-color: #00303F;
+      margin: 1em;
+      padding: 1em;
+      color: #ffffff; }
+      .services .container .quote form {
+        display: block; }
+        .services .container .quote form input {
+          display: block;
+          width: 100%; }
+        .services .container .quote form button {
+          display: block;
+          width: 100%;
+          margin-top: 0.4em;
+          padding: 0.5em;
+          background-color: #DCAE1D;
+          border: none;
+          color: #ffffff; }
+
+@media (min-width: 35em) {
+  .services .container {
+    flex-direction: row;
+    max-width: 80em;
+    margin: 0 auto; }
+  .services .quote {
+    min-width: 20em; } }
+
+/*# sourceMappingURL=style.css.map */

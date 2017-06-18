@@ -1,0 +1,277 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+header {
+  background-color: #00303F;
+  color: #ffffff;
+  border-bottom: 2px solid #DCAE1D;
+
+  & > .container {
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 1em;
+      text-transform: uppercase;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.branding {
+  h1 {
+    font-size: 1.7rem;
+    margin-bottom: 0;
+    margin-top: 1em;
+  }
+
+  .highlight {
+    color: #DCAE1D;
+  }
+}
+
+@media (min-width: 50em) {
+  header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .branding h1{
+    margin: 1em;
+  }
+}
+
+.jumbotron {
+  background-image: url("../img/showcase.jpg");
+  background-size: cover;
+  padding: 1em;
+  color: #ffffff;
+  
+  & > .container {
+    max-width: 80em;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+
+@media (min-width: 35em) {
+  .jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 35em;
+  }
+}
+
+.newsletter {
+  background-color: #00303F;
+  color: #ffffff;
+  padding: 1em;
+  
+  & > .container {
+    flex-direction: column;
+    align-items: center;
+    
+    h2 {
+      margin: 0.5em;
+    }
+
+    input {
+      padding: 0.5em;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      margin-top: 0.4em;
+      padding: 0.5em;
+      background-color: #DCAE1D;
+      border: none;
+      color: #ffffff;
+    }
+  }
+}
+
+@media (min-width: 35em) {
+  .newsletter > .container {
+    flex-direction: row;
+    justify-content: center;
+
+    form {
+      display: flex;
+      margin: 2em;
+    }
+
+    input,
+    button {
+      margin: 0.5em;
+    }
+  }
+}
+
+.features {
+  & > .container {
+    flex-wrap: wrap;
+    
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2em;
+      padding: 1em;
+      text-align: center;
+
+      img {
+        max-width: 10em;
+      }
+    }
+  }
+}
+
+@media (min-width: 35em) {
+  .features .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    .box {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      margin: 2em;
+    }
+  }
+}
+
+footer {
+  background-color: #00303F;
+  padding: 1em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.about {
+  .container {
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    max-width: 80em;
+    margin: 0 auto;
+
+    .info-box {
+      margin: 1em;
+      padding: 1em;
+      max-width: 30em;
+      background-color: #00303F;
+      color: #ffffff;
+    }
+  }
+}
+
+@media (min-width: 35em) {
+  .about {
+    .container {
+      flex-direction: row;
+    }
+
+    .info-box {
+      min-height: 20em;
+    }
+  }
+}
+
+.services {
+  text-align: center;
+
+  .container {
+    flex-direction: column;
+
+    .service {
+      margin: 1em;
+      background-color: #ddd;
+      border: 1px solid #bbb;
+    }
+
+    .quote {
+      background-color: #00303F;
+      margin: 1em;
+      padding: 1em;
+      color: #ffffff;
+
+      form {
+        display: block;
+        
+        input {
+          display: block;
+          width: 100%;
+        }
+
+        button {
+          display: block;
+          width: 100%;
+          margin-top: 0.4em;
+          padding: 0.5em;
+          background-color: #DCAE1D;
+          border: none;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 35em) {
+  .services {
+    .container {
+      flex-direction: row;
+      max-width: 80em;
+      margin: 0 auto;
+    }
+
+    .quote {
+      min-width: 20em;
+    }
+  }
+}
